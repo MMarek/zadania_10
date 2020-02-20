@@ -1,15 +1,35 @@
 import React, {Component} from "react";
 
+function SearchBox() {
+    return (
+        <section>
+            <input type='search'/>
+            <button>Wyszukaj</button>
+        </section>
+    );
+}
 
-class Task01 extends Component {
+class SearchForm extends Component {
 
     render() {
-        let name = 'widzu';
-
         return (
-            <p>Witaj na stronie w oparciu o React, {name} :)</p>
+            <section>
+                <input type='search'/>
+                <button>Wyszukaj</button>
+            </section>
         )
     }
 }
 
+function Task01() {
+    return (
+        <>
+            <SearchBox/>
+            <SearchForm/>
+        </>
+    )
+}
+
 export default Task01;
+
+
