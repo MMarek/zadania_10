@@ -29,5 +29,10 @@ Modyfikacja zadania 3. Przyjmuje on przez props tablicę obiektów z pozycjami `
 ### -zad.8
 `Komponent` przyjmujący sygnaturę waluty bazowej, kwotowej, kwotę oraz przelicznik. 
 Renderuje i przekazuje różne wartości przez props.
+
+### -zad.9
+Komponent wyświetlający nagłówek strony internetowej, oraz wyszukiwarka z placeholderem.
+
+
 #
 #### całość zobaczyć można na: https://mmarek.github.io/zadania_10/.
