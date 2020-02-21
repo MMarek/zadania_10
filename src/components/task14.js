@@ -14,11 +14,11 @@ function ReciptHeader() {
     );
 }
 
-function ReciptItems(props) {
+function RecipeItems(props) {
     const {items} = props;
     return (
         <tbody>
-        {items.map(e => <ReciptItem key={e.code} item={e}/>
+        {items.map(e => <RecipeItem key={e.code} item={e}/>
         )}
         </tbody>
     )
