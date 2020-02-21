@@ -12,7 +12,7 @@ function App() {
     return (
         <HashRouter>
             <Route exact path='/' component={Home}/>
-            {/*<Route path='/' component={Task01}/>*/}
+            {/*<Route path='/' component={Task10}/>*/}
         </HashRouter>
     );
 }

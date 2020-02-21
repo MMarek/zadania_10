@@ -33,6 +33,8 @@ Renderuje i przekazuje różne wartości przez props.
 ### -zad.9
 Komponent wyświetlający nagłówek strony internetowej, oraz wyszukiwarka z placeholderem.
 
+### -zad.10
+Komponent służący do mnożenia dwóch liczb, przyjmujący w props podane dwie liczby i renderuje wynik w elemencie `h1`
 
 #
 #### całość zobaczyć można na: https://mmarek.github.io/zadania_10/.
