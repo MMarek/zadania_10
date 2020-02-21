@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 
 function ChatHeader(props) {
     return (
@@ -59,5 +59,13 @@ let texts = [
 function Task13(props) {
     return <Chat messages={texts}/>
 }
+//
+// class Task13 extends Component{
+//     render() {
+//         return (
+            {/*<Chat messages={texts}/>*/}
+        // )
+    // }
+// }
 
 export default Task13;
