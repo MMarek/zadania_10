@@ -36,3 +36,30 @@ function RecipeItem(props) {
     )
 }
 
+function RecipeFooter(props) {
+    const {items} = props;
+    const res = items.reduce((prev, next) => prev + (next.single_price * next.qty),0);
+    return (
+        <tfoot>
+        <tr>
+            <td>Razem</td>
+            <td></td>
+            <td></td>
+            <td>{items.reduce((prev,next) => prev + (next.single_price * next.qty), 0).toFixed(2)} zł</td>
+        </tr>
+        </tfoot>
+    );
+}
+
+function Task14(props) {
+    const {items} = props;
+    return(
+        <table>
+            <ReciptHeader/>
+            <RecipeItems items={items}/>
+            <RecipeFooter items={items}/>
+        </table>
+    );
+}
+
+export default Task14;
