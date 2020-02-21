@@ -23,5 +23,7 @@
 `Komponent` przekazujący przez props tablicę, oraz sumujący wszystkie podane w niej liczby. 
 (z wykorzystaniem metody reduce)
 
+### -zad.7
+Modyfikacja zadania 3. Przyjmuje on przez props tablicę obiektów z pozycjami `menu`
 #
 #### całość zobaczyć można na: https://mmarek.github.io/zadania_10/.

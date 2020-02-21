@@ -5,12 +5,10 @@ function Sum(props) {
     return <h1>{numbers.reduce((prev, curr) => prev + curr, 0)}</h1>
 }
 
-class Task06 extends Component{
-    render() {
+function Task06() {
         return (
             <Sum numbers = {[2,4,6,8,10]}/>
         )
-    }
 }
 
 export default Task06;
