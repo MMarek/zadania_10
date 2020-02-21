@@ -19,5 +19,9 @@
 ### -zad.5
 `Komponent` w wersji funkcyjnej, przekazujący przez `props` liczby i zwracający sumę
 
+### -zad.6
+`Komponent` przekazujący przez props tablicę, oraz sumujący wszystkie podane w niej liczby. 
+(z wykorzystaniem metody reduce)
+
 #
 #### całość zobaczyć można na: https://mmarek.github.io/zadania_10/.
