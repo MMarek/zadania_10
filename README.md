@@ -41,5 +41,8 @@ Cztery komponenty wyrenderowane, zwracające informacje przez props.
 
 ### -zad.12
 `Komponent` używający komponenty z poprzedniego zadania
+
+### -zad.13
+`Komponent Chatu` podzielony wg schematu.
 #
 #### całość zobaczyć można na: https://mmarek.github.io/zadania_10/.
