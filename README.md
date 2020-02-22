@@ -40,7 +40,7 @@ Komponent służący do mnożenia dwóch liczb, przyjmujący w props podane dwie
 Cztery komponenty wyrenderowane, zwracające informacje przez props.
 
 ### -zad.12
-`Komponent` używający komponenty z poprzedniego zadania
+`Komponent` zwracający wartości pobrane z internetu, oraz przekazane przez `props` 
 
 ### -zad.13
 `Komponent Chatu` podzielony wg schematu.
