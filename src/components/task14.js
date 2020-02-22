@@ -21,10 +21,10 @@ class ReceiptItems extends Component{
         return(
             <tbody>
             {products.map((item) =>
-            <RecipeItem {...item} key={item.code}/>
-            ))}
+            <ReceiptItem {...item} key={item.code}/>
+            )}
             </tbody>
-        ):
+        );
     }
 }
 
@@ -59,6 +59,26 @@ class ReceiptFooter extends Component{
         )
     }
 }
+
+class Receipt extends Component{
+    render() {
+        return(
+            <table style={{width: '40vw'}}>
+            <ReceiptHeader/>
+            <ReceiptItems/>
+            <ReceiptFooter/>
+            </table>
+        )
+    }
+}
+
+class Task14 extends Component{
+    render() {
+        return <Receipt/>
+    }
+}
+
+export default Task14;
 
 //
 // function ReciptHeader() {
