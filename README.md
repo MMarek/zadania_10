@@ -44,5 +44,9 @@ Cztery komponenty wyrenderowane, zwracające informacje przez props.
 
 ### -zad.13
 `Komponent Chatu` podzielony wg schematu.
+
+### -zad.14
+Zaimportowana tablica, przyjmująca przez props dane z elementami `items`. Wyświetla całkowitą sumę. 
+(Wykorzystana metoda toFixed())
 #
 #### całość zobaczyć można na: https://mmarek.github.io/zadania_10/.
