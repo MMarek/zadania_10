@@ -1,65 +1,125 @@
-import React from "react";
+import React, {Component} from "react";
 import products from "./products";
 
-function ReciptHeader() {
-    return (
-        <thead>
-        <tr>
-            <th>Nazwa</th>
-            <th>Cena</th>
-            <th>Ilość</th>
-            <th>Łączna cena</th>
-        </tr>
-        </thead>
-    );
+class ReceiptHeader extends Component {
+    render() {
+        return (
+            <thead style={{textAlign: 'left'}}>
+            <tr>
+                <th>Nazwa</th>
+                <th>Cena</th>
+                <th>Ilość</th>
+                <th>Łączna cena</th>
+            </tr>
+            </thead>
+        )
+    }
 }
 
-function RecipeItems(props) {
-    const {items} = props;
-    return (
-        <tbody>
-        {items.map(e => <RecipeItem key={e.code} item={e}/>
-        )}
-        </tbody>
-    )
+class ReceiptItems extends Component{
+    render() {
+        return(
+            <tbody>
+            {products.map((item) =>
+            <RecipeItem {...item} key={item.code}/>
+            ))}
+            </tbody>
+        ):
+    }
 }
 
-function RecipeItem(props) {
-    const {code, name, single_price, qty} = props.item;
-    return(
-        <tr key={code}>
-            <td>{name}</td>
-            <td>{single_price}</td>
-            <td>{qty}</td>
-            <td>{(single_price * qty).toFixed(2)}</td>
-        </tr>
-    )
+class ReceiptItem extends Component{
+    render() {
+        const {name, single_price, qty} =this.props;
+        return (
+            <tr>
+                <td>{name}</td>
+                <td>{(single_price).toFixed(2) + " zł"}</td>
+                <td>{qty}</td>
+                <td>{(single_price * qty).toFixed(2) + " zł"}</td>
+            </tr>
+        );
+    }
 }
 
-function RecipeFooter(props) {
-    const {items} = props;
-    const res = items.reduce((prev, next) => prev + (next.single_price * next.qty),0);
-    return (
-        <tfoot>
-        <tr>
-            <td>Razem</td>
-            <td></td>
-            <td></td>
-            <td>{items.reduce((prev,next) => prev + (next.single_price * next.qty), 0).toFixed(2)} zł</td>
-        </tr>
-        </tfoot>
-    );
+class ReceiptFooter extends Component{
+    render() {
+        return (
+            <tfoot>
+            <tr>
+                <td>Razem</td>
+                <td></td>
+                <td></td>
+                <td>{(products.map(({ single_price, qty }) => single_price * qty)
+                    .reduce((price1, price2) => price1 + price2)
+                ).toFixed(2) + " zł"}
+                </td>
+            </tr>
+            </tfoot>
+        )
+    }
 }
 
-function Task14(props) {
-    const {items} = props;
-    return(
-        <table>
-            <ReciptHeader/>
-            <RecipeItems items={items}/>
-            <RecipeFooter items={items}/>
-        </table>
-    );
-}
-
-export default Task14;
+//
+// function ReciptHeader() {
+//     return (
+//         <thead>
+//         <tr>
+//             <th>Nazwa</th>
+//             <th>Cena</th>
+//             <th>Ilość</th>
+//             <th>Łączna cena</th>
+//         </tr>
+//         </thead>
+//     );
+// }
+//
+// function RecipeItems(props) {
+//     const {items} = props;
+//     return (
+//         <tbody>
+//         {products.map(e => <RecipeItem key={e.code} item={e}/>
+//         )}
+//         </tbody>
+//     )
+// }
+//
+// function RecipeItem(props) {
+//     const {code, name, single_price, qty} = props.item;
+//     return(
+//         <tr key={code}>
+//             <td>{name}</td>
+//             <td>{single_price}</td>
+//             <td>{qty}</td>
+//             <td>{(single_price * qty).toFixed(2)}</td>
+//         </tr>
+//     )
+// }
+//
+// function RecipeFooter(props) {
+//     const {products} = props;
+//     const res = products.reduce((prev, next) => prev + (next.single_price * next.qty),0);
+//     return (
+//         <tfoot>
+//         <tr>
+//             <td>Razem</td>
+//             <td></td>
+//             <td></td>
+//             <td>{products.reduce((prev,next) => prev + (next.single_price * next.qty), 0).toFixed(2)} zł</td>
+//         </tr>
+//         </tfoot>
+//     );
+// }
+//
+// function Task14(props) {
+//     const {products} = props;
+//     return(
+//         <table>
+//             <ReciptHeader/>
+//             <RecipeItems items={products}/>
+//             <RecipeFooter items={products}/>
+//         </table>
+//     );
+// }
+//
+// export default Task14;
