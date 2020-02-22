@@ -47,7 +47,7 @@ function ShopItem(props) {
     );
 }
 
-function Task11(props) {
+function Task11() {
     return (
         <ShopItem productInfo={itemData}/>
     )
